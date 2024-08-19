@@ -59,7 +59,7 @@ const actualizarEvento = async(req,res=response) => {
         const eventoActualizado = await Evento.findByIdAndUpdate( eventoID,nuevoEvento,{new:true} )
         res.json({
             ok:true,
-            msg:eventoActualizado
+            evento:eventoActualizado
         })
 
     } catch (error) {
